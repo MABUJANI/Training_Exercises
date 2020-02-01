@@ -12,3 +12,5 @@ function processUserInput(callback) {
 }
 processUserInput(greeting); 
  //output: Hello Jani
+
+
