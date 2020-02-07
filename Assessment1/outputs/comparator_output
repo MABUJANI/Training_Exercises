@@ -1,0 +1,23 @@
+Sort by ID:
+
+empId Name Salary Age
+
+6866 Jani 20000 21
+6867 Raji 25000 20
+6868 Rama 30000 22
+
+Sort by salary:
+
+salary Name empid Age
+
+20000 Jani 6866 21
+25000 Raji 6867 20
+30000 Rama 6868 22
+
+Sort by Age:
+
+age Name Salary empid
+
+20 Raji 25000 6867
+21 Jani 20000 6866
+22 Rama 30000 6868
