@@ -1,0 +1,105 @@
+//Explict Binding
+
+//Example1
+ 
+
+var stacey = {
+  
+  name1:"Jani",
+  age:21,
+  
+}
+var sayName = function(a,b,c)
+{
+  console.log(this.name1 + a + b + c);
+}
+var arr = [1,2,3]
+sayName.call(stacey,arr);
+
+sayName.apply(stacey,arr);
+let c = sayName.bind(stacey)
+c(1,2,3);
+
+
+//Example2
+
+var stacey = {
+  
+  name1:"Jani2",
+  age:21,
+  s:function(){
+    console.log(this.name1);
+  },
+  s1:function(){
+    console.log(this.name1);
+  }
+  
+  
+}
+
+ 
+
+let stacey1 = {
+  name1:"Jani1"
+}
+stacey.s.bind(stacey1)();
+stacey.s1.call(stacey);
+stacey.s1();
+stacey.s1.apply(stacey1);
+
+
+
+
+//Example3
+
+
+let out ={
+ 
+ name : 'out',
+ age : 1,
+ 
+ inner: {
+ name : 'inner',
+ age: 2
+ },
+ 
+ cal : function(){
+ console.log(this.name,this.age);
+ },
+}
+ 
+out.cal();
+out.cal.call(out.inner)
+
+
+//Example4
+
+
+let apple = {
+ name: 'apple',
+ color: 'green',
+ s1 : function s(){
+ console.log(this.name)
+ },
+ 
+}
+ 
+let ob = {
+ name : 'lori'
+}
+ 
+apple.s1.bind(ob)()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
