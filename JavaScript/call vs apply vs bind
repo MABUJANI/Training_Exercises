@@ -88,7 +88,7 @@ let ob = {
  name : 'lori'
 }
  
-apple.s1.bind(ob)()
+apple.s1.bind(ob)() 
 
 
 
