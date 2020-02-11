@@ -22,16 +22,12 @@ public class Bankoperations
 
 		System.out.println("Enter account number:");
 		BigInteger accountNumber = sc.nextBigInteger();
-		BigInteger returnValue = checkAccountNumber(accountNumber);
+		//BigInteger returnValue = checkAccountNumber(accountNumber);
 		
 		
 		// To check for valid bank account number
 		
-		if(String.valueOf(returnValue).length() !=10)
-		{
-			checkAccountNumber(returnValue);
-		}
-
+		BigInteger returnValue = checkAccountNumber(accountNumber);
 
 		// To check existence of a bank account
 	
@@ -85,22 +81,23 @@ public class Bankoperations
 	
 	public static BigInteger checkAccountNumber(BigInteger accountNumber)
 	{
-		BigInteger accountNumber1;
-		
+		int a = String.valueOf(accountNumber).length();
+		BigInteger accountNumber1 = null;
+		if(a!=10){
 		//Checking account number length by converting from BigInteger to String
-		
-		if(String.valueOf(accountNumber).length()!=10)
-		{
+		while(a!=10){
+			
 		    System.out.println("Invalid Account Number,The account number should be of length 10");
 			System.out.println("Enter desired account number:");
 			accountNumber1 = sc.nextBigInteger();
-			return accountNumber1; 
+			a = String.valueOf(accountNumber1).length();
+			}
+		return accountNumber1;
 		}
-		else
-		{
-			
-			return accountNumber;
-		}
+		return accountNumber;
+		
+		
+		
 		
 	}
 	
