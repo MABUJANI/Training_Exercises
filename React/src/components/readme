@@ -1,34 +1,34 @@
-   // Don'ts in setState 
-    //1. don't update state object directly without setState method. It will not update in UI but update the state value.
-        // Ex: this.state.count = this.state.count + 1 ; directly updating without setState
+     Don'ts in setState 
+     1. don't update state object directly without setState method. It will not update in UI but update the state value.
+          Ex: this.state.count = this.state.count + 1 ; directly updating without setState
     
     
-    // 2. don't log anything outside setState because it is an async method.So try to log anyting in the setState with the help of callback.
+      2. don't log anything outside setState because it is an async method.So try to log anyting in the setState with the help of callback.
      
-        // Ex:  this.setState({
-        //    count:this.state.count+1
-        // },
-        // () =>{
-        //     console.log("Call back",this.state.count);  // log inside the setState
-        // }
-        // )
+          Ex:  this.setState({
+             count:this.state.count+1
+          },
+          () =>{
+              console.log("Call back",this.state.count);    log inside the setState
+          }
+          )
     
     
-    // 3 . If you want to update setState multipe times on single click, then use prevState in the function to update.Otherwise it will not update.
-            //Ex:  incrementFive()
-    // {
-    //     this.incrementValue();
-    //     this.incrementValue();    updating setState multile times
-    //     this.incrementValue();
-    //     this.incrementValue();
-    // }
+      3 . If you want to update setState multipe times on single click, then use prevState in the function to update.Otherwise it will not update.
+             Ex:  incrementFive()
+      {
+          this.incrementValue();
+          this.incrementValue();    updating setState multile times
+          this.incrementValue();
+          this.incrementValue();
+      }
 
-    // this.setState((prevState) => ({    
-    //     count:prevState.count + 1,    using previous state
-    // })
+      this.setState((prevState) => ({    
+          count:prevState.count + 1,    using previous state
+     })
 
-    // )
+      )
 
 
-    // ref: counter.js
-    // https://www.youtube.com/watch?v=uirRaVjRsf4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11
+      ref: counter.js
+      https: www.youtube.com/watch?v=uirRaVjRsf4&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=11
